@@ -1,0 +1,6 @@
+set -e
+f(){
+   python gpx2svg.py $1.gpx -o $1-elevation.svg -w 15
+   python mapoverlay.py -o $1-map.svg $1.gpx
+}
+f $1
